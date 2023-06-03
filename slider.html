@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page-slider-js</title>
+    <script src="slider.js"></script>
+    <link rel="stylesheet" href="slider.css">
+
+    <style>
+      #degradado_1 {
+        background: linear-gradient(225deg, #ffc27d, #ff8e93);
+      }
+      #degradado_2 {
+        background: linear-gradient(#f3defc, #63a3e6);
+      }
+      #degradado_3 {
+        background: linear-gradient(#d2fcad, #22eaeb);
+      }
+      #degradado_4{
+        background: linear-gradient(#f0bed4, #a163f5);
+      }
+      #degradado_5 {
+        background: linear-gradient(#65cce1, #6365ec);
+      }
+
+      section > span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 7vw;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        color: #fff;
+      }
+
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ff4081;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.heart {
+  width: 100px;
+  height: 100px;
+  background-color: #ff4081;
+  position: relative;
+  animation: heartbeat 1s infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #ff4081;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -50px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: 50px;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <div class="slides">
+      <section id="degradado_1">
+<span>
+<div class="heart"></div>
+
+							<h1>El amor verdadero</h1>
+<p>El amor es un sentimiento que trasciende todas las barreras y límites. Es un vínculo que une corazones y ilumina nuestras vidas. En el amor, encontramos la fuerza para superar obstáculos y la dulzura para disfrutar los momentos más simples. Es un regalo precioso que nos conecta en lo más profundo de nuestra esencia.</p>
+<br></br>
+<div class="heart"></div>
+
+			</span></section>
+      <section id="degradado_2"><span>
+							<h1>Tu esencia</h1>
+<p>Eres mi luz en la oscuridad,<br>
+un suspiro que llena mi alma de paz.<br>
+En tu sonrisa encuentro felicidad,<br>
+un amor eterno que nunca desvanecerá.</p>
+	   </span></section>
+      <section id="degradado_3"><span>
+							Hola
+			</span></section>
+      <section id="degradado_4"><span>
+							Namaste
+			</span></section>
+      <section id="degradado_5"><span>
+							你好
+			</span></section>
+    </div>
+
+    <script>
+      var mySlider = slider('.slides');
+    </script>
+  </body>
+</html>
